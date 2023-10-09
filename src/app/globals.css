@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-violet-900 text-white;
+    @apply bg-violet-900 text-white min-h-[100dvh];
   }
 
   header {
