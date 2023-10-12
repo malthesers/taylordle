@@ -12,12 +12,14 @@ export default function Home() {
       title: "Tim McGraw",
       album: "Taylor Swift",
       duration: 234,
+      releaseYear: 2006
     },
     {
       no: 2,
       title: "Picture to Burn",
       album: "Taylor Swift",
-      duration: 175
+      duration: 175,
+      releaseYear: 2006
     }
   ])
 
