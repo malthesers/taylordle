@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface Song {
   no: number,
@@ -10,7 +10,7 @@ interface Song {
 }
 
 export default function Home() {
-
+  const [answer, setAnswer] = useState<Song>()
   const [songs, setSongs] = useState<Array<Song>>([
     {
       no: 1,
@@ -25,6 +25,10 @@ export default function Home() {
       length: 175
     }
   ])
+
+  useEffect(() => {
+    setAnswer(songs[Math.floor(Math.random() * songs.length)])
+  }, [])
 
   return (
     <main>
