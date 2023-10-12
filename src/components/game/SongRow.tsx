@@ -5,12 +5,12 @@ interface Song {
   length: number
 }
 
-export default function SongRow(song: Song) {
+export default function SongRow(props: {song: Song}) {
   return (
     <div className="flex flex-row gap-4">
-      <p>{song.album}</p>
-      <p>{song.title}</p>
-      <p>{song.length}</p>
+      <p>{props.song.album}</p>
+      <p>{props.song.title}</p>
+      <p>{props.song.length}</p>
     </div>
   )
 }
