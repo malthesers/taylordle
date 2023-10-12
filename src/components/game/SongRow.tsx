@@ -1,16 +1,15 @@
-interface Song {
-  no: number,
-  title: string,
-  album: string,
-  length: number
+import { Song } from "@/src/interfaces/song"
+
+interface Props {
+  song: Song
 }
 
-export default function SongRow(props: {song: Song}) {
+export default function SongRow({ song }: Props) {
   return (
     <div className="flex flex-row gap-4">
-      <p>{props.song.album}</p>
-      <p>{props.song.title}</p>
-      <p>{props.song.length}</p>
+      <p>{song.album}</p>
+      <p>{song.title}</p>
+      <p>{song.length}</p>
     </div>
   )
 }

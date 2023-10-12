@@ -1,12 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Song } from "../interfaces/song"
+import SongRow from "../components/game/SongRow"
 
-interface Song {
-  no: number,
-  title: string,
-  album: string,
-  length: number
+interface Props {
+  song: Song
 }
 
 export default function Home() {
@@ -32,10 +31,13 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Main</h1>
+      <h1 className="text-2xl">Main</h1>
+      <p>Answer</p>
+      <SongRow song={answer}/>
+      {/* <p>Guesses</p>
       { songs.map((song) =>
-        <p key={song.title}>{song.title}</p>
-      )}
+        <SongRow key={song.title} song={song}/>
+      )} */}
     </main>
   )
 }
