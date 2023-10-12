@@ -1,6 +1,6 @@
 export interface Song {
   no: number,
-  duration: number,
+  time: number,
   year: number,
   album: string,
   title: string,

@@ -9,14 +9,14 @@ export default function Home() {
   const [songs, setSongs] = useState<Array<Song>>([
     {
       no: 1,
-      duration: 234,
+      time: 234,
       year: 2006,
       album: "Taylor Swift",
       title: "Tim McGraw",
     },
     {
       no: 2,
-      duration: 175,
+      time: 175,
       year: 2006,
       album: "Taylor Swift",
       title: "Picture to Burn",
