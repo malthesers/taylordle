@@ -5,7 +5,7 @@ export default function SongRow({ song }: { song: Song}) {
     <div className="flex flex-row gap-4">
       <p>{song.album}</p>
       <p>{song.title}</p>
-      <p>{song.length}</p>
+      <p>{song.duration}</p>
     </div>
   )
 }
