@@ -4,18 +4,14 @@ import { useEffect, useState } from "react"
 import { Song } from "../interfaces/song"
 import SongRow from "../components/game/SongRow"
 
-interface Props {
-  song: Song
-}
-
 export default function Home() {
-  const [answer, setAnswer] = useState<Song>()
+  const [answer, setAnswer] = useState<Song | null>(null)
   const [songs, setSongs] = useState<Array<Song>>([
     {
       no: 1,
       title: "Tim McGraw",
       album: "Taylor Swift",
-      length: 234
+      length: 234,
     },
     {
       no: 2,
@@ -33,11 +29,11 @@ export default function Home() {
     <main>
       <h1 className="text-2xl">Main</h1>
       <p>Answer</p>
-      <SongRow song={answer}/>
-      {/* <p>Guesses</p>
+      { answer && <SongRow song={answer}/>}
+      <p>Guesses</p>
       { songs.map((song) =>
         <SongRow key={song.title} song={song}/>
-      )} */}
+      )}
     </main>
   )
 }
